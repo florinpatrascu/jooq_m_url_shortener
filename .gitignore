@@ -1,0 +1,15 @@
+dist/
+build/
+out/
+*.iml
+*.ipr
+*.iws
+*.ids
+.idea/
+.DS_Store
+.Spotlight-V100
+.Trashes
+*.tmproj
+logs/
+*.log
+examples/

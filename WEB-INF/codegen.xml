@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<!--
+ Florin's notes:
+
+ $ java -cp config/extensions/jooq/lib/jooq-3.3.1.jar:config/extensions/jooq/lib/jooq-meta-3.3.1.jar:config/extensions/jooq/lib/jooq-codegen-3.3.1.jar:lib/h2-1.3.170.jar:. org.jooq.util.GenerationTool ./codegen.xml
+-->
+
+<configuration>
+  <jdbc>
+    <driver>org.h2.Driver</driver>
+    <url>jdbc:h2:./urls_development</url>
+    <user>sa</user>
+    <password></password>
+  </jdbc>
+
+  <generator>
+    <database>
+      <name>org.jooq.util.h2.H2Database</name>
+      <includes>.*</includes>
+      <excludes></excludes>
+      <inputSchema>PUBLIC</inputSchema>
+    </database>
+
+    <generate>
+    </generate>
+
+    <target>
+      <packageName>models</packageName>
+      <directory>./</directory>
+    </target>
+  </generator>
+</configuration>
